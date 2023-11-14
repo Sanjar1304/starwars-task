@@ -32,6 +32,7 @@ export class CharacterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    //@ts-ignore
     this.character$ = this.route
       .paramMap
       .pipe(
