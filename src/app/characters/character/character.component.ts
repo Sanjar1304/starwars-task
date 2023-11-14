@@ -40,18 +40,13 @@ export class CharacterComponent implements OnInit {
         tap(params => this.charactersSvc.changeCharacter(+params.get('id'))),
         switchMap(() => combineLatest([
           this.charactersSvc.character$,
-          //@ts-ignore
           this.planetsSvc.planets$,
-          //@ts-ignore
           this.vehiclesSvc.vehicles$
         ]).pipe(
-          //@ts-ignore
           map(([character, planets, vehicles]) => {
             return {
               ...character,
-              //@ts-ignore
               homeworldData: planets.find(planet => character.homeworldId === planet.id),
-              //@ts-ignore
               vehiclesData: vehicles.filter(vehicle => character.vehicleIds.includes(vehicle.id))
             }
           })

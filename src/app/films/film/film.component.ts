@@ -51,28 +51,18 @@ export class FilmComponent implements OnInit {
         switchMap(() => combineLatest([
           this.filmsSvc.film$,
           this.charactersSvc.characters$,
-          //@ts-ignore
           this.planetsSvc.planets$,
-          //@ts-ignore
           this.speciesSvc.species$,
-          //@ts-ignore
           this.starshipsSvc.starships$,
-          //@ts-ignore
           this.vehiclesSvc.vehicles$
         ]).pipe(
-          //@ts-ignore
           map(([film, characters, planets, species, starships, vehicles]) => {
             return {
               ...film,
-              //@ts-ignore
               charactersData: characters.filter(character => film.characterIds.includes(character.id)),
-              //@ts-ignore
               planetsData: planets.filter(planet => film.planetIds.includes(planet.id)),
-              //@ts-ignore
               speciesData: species.filter(specie => film.speciesIds.includes(specie.id)),
-              //@ts-ignore
               starshipsData: starships.filter(starship => film.starshipIds.includes(starship.id)),
-              //@ts-ignore
               vehiclesData: vehicles.filter(vehicle => film.vehicleIds.includes(vehicle.id))
             };
           })
