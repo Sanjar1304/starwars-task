@@ -8,6 +8,8 @@ import { CharacterComponent } from './characters/character/character.component';
 import { FilmsComponent } from './films/films.component';
 import { FilmComponent } from './films/film/film.component';
 import { HomeComponent } from './home/home.component';
+import { ListComponent } from './list/list.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomeComponent } from './home/home.component';
     CharacterComponent,
     FilmsComponent,
     FilmComponent,
-    HomeComponent
+    HomeComponent,
+    ListComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
