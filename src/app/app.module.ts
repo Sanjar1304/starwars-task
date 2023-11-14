@@ -10,6 +10,8 @@ import { FilmComponent } from './films/film/film.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { LoadingComponent } from './loading/loading.component';
+import { PlanetsComponent } from './planets/planets.component';
+import { PlanetComponent } from './planets/planet/planet.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LoadingComponent } from './loading/loading.component';
     FilmComponent,
     HomeComponent,
     ListComponent,
-    LoadingComponent
+    LoadingComponent,
+    PlanetsComponent,
+    PlanetComponent
   ],
   imports: [
     BrowserModule,
