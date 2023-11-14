@@ -1,12 +1,31 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
+import { RouterModule, Routes } from '@angular/router';
 
+import { CharactersComponent } from './characters.component';
+import { CharacterComponent } from './character/character.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: CharactersComponent
+  },
+  {
+    path: ':id',
+    component: CharacterComponent,
+    data: {
+      pageTitle: 'View Character'
+    }
+  },
+]
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    RouterModule.forChild(routes)
+  ],
+  exports: [
+    RouterModule
   ]
 })
 export class CharactersRoutingModule { }
