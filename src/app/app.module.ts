@@ -16,6 +16,8 @@ import { SpeciesComponent } from './species/species.component';
 import { SpecieComponent } from './species/specie/specie.component';
 import { StarshipsComponent } from './starships/starships.component';
 import { StarshipComponent } from './starships/starship/starship.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { VehicleComponent } from './vehicles/vehicle/vehicle.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { StarshipComponent } from './starships/starship/starship.component';
     SpeciesComponent,
     SpecieComponent,
     StarshipsComponent,
-    StarshipComponent
+    StarshipComponent,
+    VehiclesComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,
