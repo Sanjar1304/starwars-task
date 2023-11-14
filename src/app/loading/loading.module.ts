@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { LoadingComponent } from './loading.component';
+
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LoadingComponent
+  ],
+  exports: [
+    LoadingComponent
+  ],
   imports: [
     CommonModule
   ]
