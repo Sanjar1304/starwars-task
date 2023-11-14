@@ -1,12 +1,25 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
+import { PlanetComponent } from './planet/planet.component';
+import { PlanetsComponent } from './planets.component';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: PlanetsComponent
+  },
+  {
+    path: ':id',
+    component: PlanetComponent,
+    data: {
+      pageTitle: 'View Planet'
+    }
+  }
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class PlanetsRoutingModule { }

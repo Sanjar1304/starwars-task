@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Planet, PlanetsService } from './planets.service';
 
 @Component({
   selector: 'app-planets',
@@ -6,5 +9,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./planets.component.scss']
 })
 export class PlanetsComponent {
+  planets$!: Observable<Planet[]>;
 
+  get currentFilter(): string {
+    return this.planetsSvc.getCurrentFilter();
+  }
+
+  constructor(private planetsSvc: PlanetsService) { }
+
+  ngOnInit(): void {
+    this.planets$ = this.planetsSvc.planets$;
+  }
+
+  onInput(text: string): void {
+    this.planetsSvc.changeFilter(text);
+  }
 }
