@@ -12,6 +12,8 @@ import { ListComponent } from './list/list.component';
 import { LoadingComponent } from './loading/loading.component';
 import { PlanetsComponent } from './planets/planets.component';
 import { PlanetComponent } from './planets/planet/planet.component';
+import { SpeciesComponent } from './species/species.component';
+import { SpecieComponent } from './species/specie/specie.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PlanetComponent } from './planets/planet/planet.component';
     ListComponent,
     LoadingComponent,
     PlanetsComponent,
-    PlanetComponent
+    PlanetComponent,
+    SpeciesComponent,
+    SpecieComponent
   ],
   imports: [
     BrowserModule,
