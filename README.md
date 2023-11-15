@@ -1,5 +1,5 @@
 # StarwarsTask
-https://sanjar1304.github.io/starwars-task
+https://starwars-apex-task.netlify.app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
